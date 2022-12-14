@@ -7,13 +7,25 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "baseUrl": "./",
+    "paths": {
+      "@factories/*": ["./src/core/infra/factory/*"],
+      "@infra/*": ["./src/core/infra/*"],
+
+      "@domain/*": ["./src/core/domain/*"],
+      "@entities/*": ["./src/core/domain/entities/*"],
+      "@app/*": ["./src/core/app/*"],
+      "@contexts/*": ["./src/contexts/*"]
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
